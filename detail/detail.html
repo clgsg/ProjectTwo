@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en,es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;700&family=Yanone+Kaffeesatz:wght@300;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="stylesDetail.css">
+    <title>Detail 🍻</title>
+</head>
+<body>
+    <div class="main">
+        <h1 id="thisIsBeer"></h1>
+        <div class="detail" id="detailUp"></div>
+        <div class="detail" id="detailMid"></div>
+            <div class="subdetailMid" id="beerImg"></div>
+            <div class="subdetailMid" id="HopsYeastMalt"></div>
+        <div class="detail" id="detailBott"></div>
+        <div class="detail" id="mapid"></div>
+        </div>
+    </div>
+    <div class="buttons">
+        <button id="previousBeerResult">Previous beer</button>
+        <a href="../index.html"><button id="goToSearchPage">Go to search page</button></a>
+        <button id="nextBeerResult">Next beer</button>
+        <a href="detail.html"><button id="randomButtonIndex">Get a random beer</button></a>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+   <script src="detail.js"></script>
+</body>
+</html>
