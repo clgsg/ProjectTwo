@@ -60,27 +60,52 @@ const food = parameters.get("food");
 
 
 //Info en detailUp
-const detailUp = {
-    document.getElementById("detailUp").innerHTML = `<h2>Name</h2><p>${beerName}</p><h2>Tagline</h2><p>${beerTagline}</p>`
-}
+const paintBeerName = () => {
+    let a = document.getElementById("beerName").innerHTML;
+    return a+`<p>${beerName}</p>`;
+};
+
+const paintTagline = () => {
+    let b = document.getElementById("tagline").innerHTML;
+    return b+`<p>${beerTagline}</p>`;
+};
+
 
 
 //Info en detailMid
-/*const imageDiv = {
-    document.getElementById("beerImg").innerHTML = `${beerImg()}`
+const imageDiv = () => {
+    let c = document.getElementById("beerImg").innerHTML;
+    return c+`${image_url}`;
 }
 
-const hopsYeastMaltDiv = {
-    document.getElementById("HopsYeastMalt").innerHTML = `<h2>Hops</h2><p>${hops}</p><h2>Yeast</h2><p>${yeast}</p><h2>Malt</h2><p>${malt}</p>`
+const paintHops = () => {
+    let d= document.getElementById("hops").innerHTML;
+    return d+`<p>${element.hops}</p>`;
+}
+ 
+const paintYeast = () => {
+    let d= document.getElementById("yeast").innerHTML;
+    return d+`<p>${element.yeast}</p>`
 }
 
-*/
+const paintMalt = () => {
+    let d= document.getElementById("malt").innerHTML;
+    return d+`<p>${element.malt}</p>`
+}
+
+//Botón 'prevBeer'
+
+
+
+//Botón 'nextBeer'
+
+
+
 
 //Info en detailBott
 
-const detailUp = {
-    let detail= document.getElementById("detailBott");
-    document.getElementById("detailBott").innerHTML = `<h2>Food</h2><p>${food}</p>`,
+const detailBott = () => {
+    document.getElementById("detailBott").innerHTML = `<h2>Food</h2><p>${element.food}</p>`;
 }
 
 
