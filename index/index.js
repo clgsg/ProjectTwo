@@ -29,7 +29,7 @@ const getThisBeer = () => fetch(`${baseURL}?beer_name=${beerToSearch}`)
     })
     .then((data) => {
         console.log(data);
-        const node = document.getElementById('results');
+        const node = document.getElementById('myBeer');
         data.forEach = element => {
            node.innerHTML += `<h3 id="nameOfBeer"><a href="/detail/detail.html">${element.name}</a></h3>`
         }; 

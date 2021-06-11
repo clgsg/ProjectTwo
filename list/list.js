@@ -28,7 +28,7 @@ const beerImg = parameters.get("")
 
 const food = parameters.get("food");
 const beer = [];
-const beerFetch = () => fetch(`${baseURL}?${beerId}`)
+/*const beerFetch = () => fetch(`${baseURL}?${beerId}`)
     .then(function(res) {
         return res.json();
     })
@@ -40,19 +40,32 @@ const beerFetch = () => fetch(`${baseURL}?${beerId}`)
         }); 
     return beer;
     });
-    let beerList = [];
-
+    let beerList = [];*/
+const beerFetch = () =>
+    fetch(`${baseURL}`)  ///${beerId}
+      .then( (res) => {
+        return res.json();
+      })
+      .then((results) => {
+        console.log(results);
+        const node = document.getElementById("results");
+        results.forEach( (element) => {
+          node.innerHTML += `<h3 id="nameOfBeer"><img src=${element.image_url} id="beerImage"><a href="../detail/detail.html?id=${element.id}">${element.name}</a></h3>`;
+        });
+        return beer;
+      });
 beerFetch();
-
-//Botón en página de inicio para comenzar lista de referencias
-const getBeers = document.getElementById('results').addEventListener("click", beerFetch());
-
 
 
 //Función al clicar 'Get random beer' para obtener un elemento de manera aleatoria
-const randomBeer = () => {
-    const a = Math.floor(Math.random) * 325;
-    return beerFetch(a)}
+const randomBeer = () => fetch("https://api.punkapi.com/v2/beers/random")
+    .then((res) => {
+        return res.json();
+    })
+    .then((data) => {
+        const node = document.getElementById('results');
+        return node.innerHTML= `<a href="/detail/detail.html"></a>`
+    })
 
 
 //Pasar a anterior página de resultados
