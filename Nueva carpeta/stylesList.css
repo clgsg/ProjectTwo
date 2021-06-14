@@ -2,11 +2,11 @@
 font-family: 'Yanone Kaffeesatz', sans-serif;*/
 
 :root {
-    --h1: #1e90ff;
+    --h1: #123548;
+    --h2: rgb(2, 50, 73);
+    --h3: #128080;
     --buttonOnClickBckGr: #123548;
     --buttonOnClickTxtBrdr: #93b7c3;
-
-
 }
 
 
@@ -23,16 +23,15 @@ font-family: 'Yanone Kaffeesatz', sans-serif;*/
         font-size: medium;
         color: var(--h1);
     }
-    
-    #glassOfBeer {
-        max-height: 250px;
-        max-width: 120px;
+    #beerImage {
+        max-height: 100px;
+        max-width: 80px;
         padding: 10px;
         margin: 10px;
         border-radius: 4px;
-        display: flex;
-        position:relative;
+        flex-wrap: nowrap;
     }
+    
 }
 
 @media only screen and (max-width: 1200px){
@@ -48,13 +47,13 @@ font-family: 'Yanone Kaffeesatz', sans-serif;*/
         color: var(--h1);
     }
     
-    #glassOfBeer {
-        max-height: 300px;
-        max-width: 180px;
+    #beerImage {
+        max-height: 100px;
+        max-width: 80px;
         padding: 10px;
         margin: 10px;
         border-radius: 4px;
-        display: flex;
+        flex-wrap: nowrap;
     }
 }
 
@@ -99,11 +98,48 @@ h3 {
     color: var(--h3);
 }
 
-#glassOfBeer {
-    max-height: 300px;
-    max-width: 180px;
+#beerImage {
+    max-height: 100px;
+    max-width: 80px;
     padding: 10px;
     margin: 10px;
-    border-radius: 4px;
-    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+button {
+    display: inline-block;
+    border-radius: 8px;
+    border: transparent;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: 10px;
+    text-decoration: none;
+    background: #93b7c3;
+    color: #123548;
+    font-family: 'Baloo Tammudu 2';
+    cursor: pointer;
+    text-align: center;
+    transition: background 800ms ease-in-out, transform 800ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+button:hover, button:focus {
+    background: var(--buttonOnClickBckGr);
+    color: var(--buttonOnClickTxtBrdr);
+    outline: 1px solid var(--buttonOnClickTxtBrdr);
+    outline-offset: -1px;
+    }
+
+
+button:active {
+    background: var(--buttonOnClickBckGr);
+    color: var(--buttonOnClickTxtBrdr);
+    outline: 1px solid var(--buttonOnClickTxtBrdr);
+    outline-offset: -1px;
+    transform: scale(0.85);
 }

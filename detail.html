@@ -4,25 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;700&family=Yanone+Kaffeesatz:wght@300;700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles4all.css">
     <title>Detail 🍻</title>
 </head>
 <body>
     <div class="main">
-        <h1>What beer would you like to learn about?</h1>
-        <div id="form">
-            <form action="" method="get" target="_blank">
-                <input type="search" name="Name" id="">
-
-
-            </form>
+<!--        <div class="hero" id="hero_frame">
+            <img class="hero" id="beer_image" src="img/beer3_landscape.jpg">
+            <div class="hero" id="hero_text_div">
+                <h1 class="hero" id="hero_mainText">Beer World</h1>
+                <p class="hero" id="hero_subText">Your source for anything beer!</p>
+            </div>
+        </div>-->
+        
+        <div id="beer-detail">
+            
+            <table id="dataTable"></table>   
+            <div id="beerImage"></div>
+            <div class="detail" id="mapid"></div>
+            </div>
         </div>
     </div>
-        <a href="result.html"><button id="firstBeer">First beer</button></a>
-        <a href="random.html"><button id="randomButtonIndex">Get a random beer</button></a>
-    <script src="home.js"></script>
-    <script src="selectedbeer.js"></script>
+    <div class="buttons">
+        <button id="previousBeerResult" onclick="prevBeer()">Previous beer</button>
+        <a href="index.html"><button id="goToSearchPage">Go to search page</button></a>
+        <button id="nextBeerResult" onclick="nextBeer()">Next beer</button>
+        <a href="detail.html"><button id="randomButton">Get a random beer</button></a>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+   <script src="scripts4all.js"></script>
 </body>
 </html>
